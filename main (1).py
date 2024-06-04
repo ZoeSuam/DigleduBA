@@ -15,7 +15,7 @@ import logging
 required_version = version.parse("1.1.1")
 
 current_version = version.parse(openai.__version__)
-OPENAI_API_KEY = 'sk-proj-xcxwy6dTNmvhOVog9uWsT3BlbkFJWCsGcweZoXbsLXTYiby5'
+OPENAI_API_KEY = 'secret'
 if current_version < required_version:
   raise ValueError(f"Error: OpenAI version {openai.__version__}"
                    " is less than the required version 1.1.1")
@@ -25,7 +25,7 @@ else:
 # Start Flask app
 app = Flask(__name__)
 
-app.secret_key = "494994094"
+app.secret_key = "secret"
 
 # Init client
 client = OpenAI(
@@ -33,10 +33,10 @@ client = OpenAI(
 
 # Create new assistant or load existing
 #assistant_id = functions.create_assistant(client)
-assistant_id = 'asst_tcnHUpUG0h9z8C0lziOGpEkX'
-assistantAI_id = 'asst_I8gIfnJDs2cMBF9Lfzb9a3BC'
-assistantFT_id = 'asst_X5BBdIvtoumlOxpgzdAjuZu9'
-assistantStory_id = 'asst_tsdxN5yV92SP8zYNLMQSVc9b'
+assistant_id = secret.ass1ID
+assistantAI_id = secret.ass2ID
+assistantFT_id = secret.ass3ID
+assistantStory_id = secret.ass4.ID
 
 
 @app.route('/')
@@ -165,7 +165,7 @@ def chatFT2():
 
         # Rufe die Chat Completion API mit einer Sequenz von Nachrichten auf
         response = client.chat.completions.create(
-            model="ft:gpt-3.5-turbo-0125:personal::97QirxUL",
+            model=secret.FT_ID,
             messages=[
                 {"role": "system", "content": "You are a helpful assistant designed to converse on business administration topics, providing suggestions and engaging users with motivational talks in German. Speak directly and encourage questioning to prompt further thinking."},
                 {"role": "user", "content": user_input}

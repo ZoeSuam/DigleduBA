@@ -30,5 +30,5 @@ def upload_file_and_finetune(file_path, model_name, api_key):
 
 if __name__ == '__main__':
     # Make sure to replace the following placeholders with your actual data and API key
-    upload_file_and_finetune("ParsedConversations3.jsonl", "gpt-3.5-turbo-0125", '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')
+    upload_file_and_finetune("ParsedConversations3.jsonl", "gpt-3.5-turbo-0125", api_key)
 
