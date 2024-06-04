@@ -3,7 +3,7 @@ from requests_oauthlib import OAuth2Session
 
 # Einstellungen für Google OAuth2
 GOOGLE_CLIENT_ID = secret2
-GOOGLE_CLIENT_S = secret3
+#here was a key 
 GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/auth"
 GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token"
 REDIRECT_URI = "http://zoesuam.pythonanywhere.com/auth"
